@@ -28,8 +28,8 @@ def get_codes_table(url): #Парсим данные таблицы с сайт�
 
 def populate_google_table(url): #Заполняем гугл таблицу данными, которые спарсили и предварительно преобразовали 
     sa = gspread.service_account(filename="config/creds.json")
-    sh = sa.open("api")
-    wks = sh.worksheet("api1")
+    sh = sa.open("codes_table")
+    wks = sh.worksheet("tab1")
 
     num_row = 1
     col_a, col_b = 'A', 'B'
